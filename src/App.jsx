@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
+  const loadedCoffees = useLoaderData();
+
   return (
     <>
-      <h1 className='text-4xl text-purple-500'>Vite + React</h1>
+      <h1 className='text-4xl text-purple-500'>Coffee Store {loadedCoffees.length}</h1>
 
       <div className='mt-10'>
         <Link to='/addCoffee'>
@@ -15,7 +17,7 @@ function App() {
 
       <div>
         {
-          
+
         }
       </div>
 
